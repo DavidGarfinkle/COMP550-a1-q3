@@ -1,0 +1,19 @@
+[[source]]
+verify_ssl = true
+url = "https://pypi.org/simple"
+name = "pypi"
+
+[requires]
+python_version = "3.5"
+
+[packages]
+numpy = "*"
+scikit-learn = "*"
+nltk = "*"
+scipy = "*"
+pandas = "*"
+matplotlib = "*"
+pymongo = {extras = ["tls"], version = "*"}
+
+[dev-packages]
+ipython = "*"
