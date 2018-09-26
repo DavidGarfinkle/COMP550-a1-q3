@@ -96,7 +96,7 @@ for ngram_range, (morph, data), min_df in product(
 
     cv = CountVectorizer(min_df=min_df, ngram_range=ngram_range)
 
-    X = cv.fit_transform(data['phrase'].values)
+    X = cv.fit_transform(data['phrase'].values).toarray()
     y = raw_data['class'].values
 
     print("Inserting bag of words {} {} {}".format(ngram_range, morph, min_df))
